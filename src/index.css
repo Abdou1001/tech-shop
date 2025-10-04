@@ -1,0 +1,56 @@
+@import "tailwindcss";
+/* font Inter */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+@theme {
+    /* color variable */
+    --color-primary: #f42c37;
+    --color-secondary: #f42c37;
+    --color-brandYellow: #fdc62e;
+    --color-brandGreen: #2dcc6f;
+    --color-brandBlue: #1376f4;  
+    --color-brandWhite: #eeeeee;
+
+    /*  container */
+    --breakpoint-sm: 40rem;
+    --breakpoint-md: 48rem;
+    --breakpoint-lg: 64rem;
+    --breakpoint-xl: 75rem;
+    --breakpoint-2xl: 96rem;
+    
+    /* Dark Moode */
+    --color-dark-bg: #111827; /* bg dark */
+    --color-dark-text: #f3f4f6; /* text dark */
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html{
+    font-family: "Tajawal", sans-serif;
+}
+
+.container {
+    @apply px-[1rem] mx-auto;
+}
+
+.numItemCart{
+    @apply absolute top-[-15px] right-[-15px] bg-primary p-2 rounded-full flex justify-center items-center text-white w-[20px] h-[20px] text-[14px] font-bold transition-[.3s]
+}
+
+.menuLinks{
+    @apply hover:text-primary duration-200 inline-block font-[600] text-[16px] text-gray-500 dark:text-gray-400
+}
+
+.input-style{
+    @apply border-gray-300 dark:border-gray-700 border-2 w-full p-2 rounded-full my-3  bg-gray-100 dark:bg-gray-800 text-sm
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
